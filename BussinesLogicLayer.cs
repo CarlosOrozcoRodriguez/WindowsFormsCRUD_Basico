@@ -36,9 +36,9 @@ namespace WindowsFormsAppTestVideo
              _dataAccessLayer.Delete(contact);
         }
 
-        internal List<Contact> GetContacts()
+        internal List<Contact> GetContacts(string filtro = null)
         {
-            return _dataAccessLayer.GetContacts();
+            return _dataAccessLayer.GetContacts(filtro);
         }
     }
 }

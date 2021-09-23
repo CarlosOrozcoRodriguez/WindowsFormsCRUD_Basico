@@ -31,11 +31,6 @@ namespace WindowsFormsAppTestVideo
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridviewXXX = new System.Windows.Forms.DataGridView();
-            this.textBoxBuscar = new System.Windows.Forms.TextBox();
-            this.labelBuscar = new System.Windows.Forms.Label();
-            this.buttonBuscar = new System.Windows.Forms.Button();
-            this.buttonAniadir = new System.Windows.Forms.Button();
-            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +38,11 @@ namespace WindowsFormsAppTestVideo
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBoxBuscar = new System.Windows.Forms.TextBox();
+            this.labelBuscar = new System.Windows.Forms.Label();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.buttonAniadir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridviewXXX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,45 +65,6 @@ namespace WindowsFormsAppTestVideo
             this.dataGridviewXXX.Size = new System.Drawing.Size(755, 397);
             this.dataGridviewXXX.TabIndex = 0;
             this.dataGridviewXXX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridviewXXX_CellContentClick);
-            // 
-            // textBoxBuscar
-            // 
-            this.textBoxBuscar.Location = new System.Drawing.Point(91, 14);
-            this.textBoxBuscar.Name = "textBoxBuscar";
-            this.textBoxBuscar.Size = new System.Drawing.Size(498, 20);
-            this.textBoxBuscar.TabIndex = 1;
-            // 
-            // labelBuscar
-            // 
-            this.labelBuscar.AutoSize = true;
-            this.labelBuscar.Location = new System.Drawing.Point(30, 17);
-            this.labelBuscar.Name = "labelBuscar";
-            this.labelBuscar.Size = new System.Drawing.Size(40, 13);
-            this.labelBuscar.TabIndex = 2;
-            this.labelBuscar.Text = "Buscar";
-            // 
-            // buttonBuscar
-            // 
-            this.buttonBuscar.Location = new System.Drawing.Point(614, 12);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuscar.TabIndex = 3;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.UseVisualStyleBackColor = true;
-            // 
-            // buttonAniadir
-            // 
-            this.buttonAniadir.Location = new System.Drawing.Point(713, 12);
-            this.buttonAniadir.Name = "buttonAniadir";
-            this.buttonAniadir.Size = new System.Drawing.Size(75, 23);
-            this.buttonAniadir.TabIndex = 4;
-            this.buttonAniadir.Text = "Añadir";
-            this.buttonAniadir.UseVisualStyleBackColor = true;
-            this.buttonAniadir.Click += new System.EventHandler(this.ButtonAniadir_Click);
-            // 
-            // contactBindingSource
-            // 
-            this.contactBindingSource.DataSource = typeof(WindowsFormsAppTestVideo.Contact);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -150,6 +111,46 @@ namespace WindowsFormsAppTestVideo
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Text = "Eliminar";
             this.Eliminar.UseColumnTextForLinkValue = true;
+            // 
+            // contactBindingSource
+            // 
+            this.contactBindingSource.DataSource = typeof(WindowsFormsAppTestVideo.Contact);
+            // 
+            // textBoxBuscar
+            // 
+            this.textBoxBuscar.Location = new System.Drawing.Point(91, 14);
+            this.textBoxBuscar.Name = "textBoxBuscar";
+            this.textBoxBuscar.Size = new System.Drawing.Size(498, 20);
+            this.textBoxBuscar.TabIndex = 1;
+            // 
+            // labelBuscar
+            // 
+            this.labelBuscar.AutoSize = true;
+            this.labelBuscar.Location = new System.Drawing.Point(30, 17);
+            this.labelBuscar.Name = "labelBuscar";
+            this.labelBuscar.Size = new System.Drawing.Size(40, 13);
+            this.labelBuscar.TabIndex = 2;
+            this.labelBuscar.Text = "Buscar";
+            // 
+            // buttonBuscar
+            // 
+            this.buttonBuscar.Location = new System.Drawing.Point(614, 12);
+            this.buttonBuscar.Name = "buttonBuscar";
+            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.TabIndex = 3;
+            this.buttonBuscar.Text = "Buscar";
+            this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            // 
+            // buttonAniadir
+            // 
+            this.buttonAniadir.Location = new System.Drawing.Point(713, 12);
+            this.buttonAniadir.Name = "buttonAniadir";
+            this.buttonAniadir.Size = new System.Drawing.Size(75, 23);
+            this.buttonAniadir.TabIndex = 4;
+            this.buttonAniadir.Text = "Añadir";
+            this.buttonAniadir.UseVisualStyleBackColor = true;
+            this.buttonAniadir.Click += new System.EventHandler(this.ButtonAniadir_Click);
             // 
             // Main
             // 

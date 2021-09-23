@@ -46,11 +46,11 @@ namespace WindowsFormsAppTestVideo
             PopulateContacts();
         }
 
-        public void PopulateContacts()
+        public void PopulateContacts(string filtro = null)
         {
             try
             {
-                List<Contact> contacList = _bussinesLogicLayer.GetContacts();
+                List<Contact> contacList = _bussinesLogicLayer.GetContacts(filtro);
                 dataGridviewXXX.DataSource = contacList;
             }
             catch (Exception)
@@ -93,6 +93,12 @@ namespace WindowsFormsAppTestVideo
                 _bussinesLogicLayer.Delete(contact);
                 PopulateContacts();
             }
+        }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            string filtro = textBoxBuscar.Text != "" ? textBoxBuscar.Text : null;
+            PopulateContacts(filtro);
         }
     }
 }

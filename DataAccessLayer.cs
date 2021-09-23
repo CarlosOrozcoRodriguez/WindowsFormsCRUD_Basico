@@ -20,15 +20,23 @@ namespace WindowsFormsAppTestVideo
             ToDataBase(contact, query);
         }
 
-        internal List<Contact> GetContacts()
+        internal List<Contact> GetContacts(string filter = null)
         {
             List<Contact> contactos = new List<Contact>();
             try
             {
                 conn.Open();
-                string query = @"SELECT Id, Nombre, Apellido, Telefono, Direccion
-                                FROM Contacts";
+                string query = filter==null 
+                                ? @"SELECT Id, Nombre, Apellido, Telefono, Direccion
+                                    FROM Contacts" 
+                                : @"SELECT Id, Nombre, Apellido, Telefono, Direccion
+                                    FROM Contacts 
+                                    WHERE Nombre = @Nombre" ;
+                
+
                 SqlCommand sqlCommand = new SqlCommand(query, conn);
+                SqlParameter parameter = new SqlParameter("Nombre", filter??"");
+                sqlCommand.Parameters.Add(parameter);
                 SqlDataReader reader = sqlCommand.ExecuteReader();
 
                 while (reader.Read())
